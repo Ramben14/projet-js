@@ -13,12 +13,16 @@ button.oneclick = function(){
 
         if(input.value< secretNumber){
             message.innerText= "le nombre est plus grand"; + input.value + '';
-            message.style.color = "red";
+            message.style.color = "black";
         }else if (input.value > secretNumber){
             message.innerText= "le nombre est plus petit"; + input.value + '';
-            message.style.color = "red";
+            message.style.color = "black";
         }
-        
+        if (attempts ==0)
+        message.innerText= "dommage vous avez perdu , il fallait trouvé " + secretNumber +'';
+        message.style.color = "red";
+        form.style.color = "none";
+        link.style.display = 'flex';
 
     }else {
         message.innerText = "est vide";
